@@ -11,18 +11,9 @@
 [[plugins]]
   package = "@netlify/plugin-functions-install-core"
 
-# Python dependencies for serverless functions
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
 
-  [functions.analyze-audio]
-    external_node_modules = ["formidable"]
-
-# Python runtime configuration
-[build.environment.PYTHON]
-  requirements = """
-  numpy==1.24.3
-  librosa==0.10.1
-  matplotlib==3.7.2
-  """
+[functions.analyze-audio]
+  external_node_modules = ["formidable"]
