@@ -1,11 +1,3 @@
-import './globals.css';
-import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Music Genre Classifier',
-  description: 'Analyze music tracks to determine their genre using machine learning',
-};
-
 export default function RootLayout({
   children,
 }: {
@@ -13,6 +5,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <title>Music Genre Classifier</title>
+        <meta name="description" content="Analyze music tracks to determine their genre using machine learning" />
+      </head>
       <body className="bg-gray-900 text-white">
         {children}
       </body>
